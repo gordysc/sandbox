@@ -21,10 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "bg-background min-h-screen font-sans antialiased",
           fontSans.variable
         )}
       >
@@ -35,7 +35,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="container mx-auto max-w-4xl p-4">
-            <header className="flex justify-between">
+            <header className="flex items-center justify-between">
               <span className="text-2xl font-bold">Sandbox</span>
               <ThemeToggle />
             </header>
